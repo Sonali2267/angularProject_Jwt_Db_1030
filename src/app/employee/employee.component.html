@@ -1,1 +1,103 @@
-<p>employee works!</p>
+<div class="container-fluid">
+    <h2 class="text-primary text-center">
+      <marquee direction="up" class="text-center" style="background-color: #a0c49f;">Employees List</marquee></h2>
+    <div class = "row">
+        <div class="col-8" style="margin-left:62px;">
+            <button class="btn btn-info m-2" data-target="#newModal" data-toggle="modal">
+                <i class="fa fa-plus"></i>Add New Employee
+            </button>
+        </div>
+    </div>
+    <div class="container rounded border p-2 m-10">
+        <table class="table table-bordered table-striped table-active">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>  
+            </thead>
+            <tbody>
+             
+            <!-- <tr>
+                <td>Sonali</td>
+                <td>kangra</td>
+                <td>berojgaar</td>
+                <td>
+                    <button class="btn btn-info m-1" data-target="#editModal" data-toggle="modal">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Sahil</td>
+                <td>kangra</td>
+                <td>20,000</td>
+                <td>
+                    <button class="btn btn-info m-1" data-target="#editModal" data-toggle="modal">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </td>
+            </tr> -->
+            </tbody>
+        </table>
+    </div>
+    
+      <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #e3f2fd;">
+              <h5 class="modal-title" id="exampleModalLabel">Add Employee</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                
+      <div class="form-group">
+        <input class="form-control " type="text" placeholder="Name">
+        <input class="form-control" type="text" placeholder="Address">
+        <input class="form-control" type="text" placeholder="Salary">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+              <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+       <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Employee</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                
+      <div class="form-group">
+        <input  class="form-control " type="text" placeholder="Name">
+        <input  class="form-control" type="text" placeholder="Address">
+        <input  class="form-control" type="text" placeholder="Salary">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button"  data-dismiss="modal">Update</button>
+              <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
