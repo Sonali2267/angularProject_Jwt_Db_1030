@@ -1,2 +1,20 @@
 export class Register {
+    id:any;
+    name:any;
+    password:any;
+    address:any;
+    email:any;
+    city:any;
+    state:any;
+    gender:any;
+    constructor(){
+        this.id=null;
+        this.name=null;
+        this.password=null;
+        this.address=null;
+        this.email=null;
+        this.city=null;
+        this.state=null;
+        this.gender=null;
+    }
 }
