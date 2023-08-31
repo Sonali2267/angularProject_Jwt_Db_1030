@@ -17,11 +17,11 @@ export class RegisterService {
 return this.httpclient.post<any>("https://localhost:7099/api/Register",newRegister);
   }
 
-  upadteRegister(editRegister:Register):Observable<any>{
-    return this.httpclient.put<any>("https://localhost:7099/api/Register",editRegister);
-  }
+//   upadteRegister(editRegister:Register):Observable<any>{
+//     return this.httpclient.put<any>("https://localhost:7099/api/Register",editRegister);
+//   }
 
-  deleteRegister(id:number):Observable<any>{
-    return this.httpclient.delete<any>("https://localhost:7099/api/Register/"+id);
-  }
+//   deleteRegister(id:number):Observable<any>{
+//     return this.httpclient.delete<any>("https://localhost:7099/api/Register/"+id);
+//   }
 }

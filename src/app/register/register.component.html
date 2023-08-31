@@ -57,6 +57,30 @@
           </div>
         </div>
       </fieldset>
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" (click)="saveClick()"data-target="#saveModal"class="btn btn-primary">Register</button>
   </form>
+</div>
+
+
+<div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+   
+      <div class="modal-body">
+          
+<div class="form-group">
+  <input [(ngModel)]="newRegister.name" class="form-control " type="text" placeholder="Name">
+  <input [(ngModel)]="newRegister.password" class="form-control" type="text" placeholder="password">
+  <input [(ngModel)]="newRegister.address" class="form-control" type="text" placeholder="Address">
+  <input [(ngModel)]="newRegister.email" class="form-control" type="text" placeholder="Email"> 
+  <input [(ngModel)]="newRegister.city" class="form-control" type="text" placeholder="City"> 
+  <input [(ngModel)]="newRegister.state" class="form-control" type="text" placeholder="State">
+  <input [(ngModel)]="newRegister.gender" class="form-control" type="text" placeholder="Gender">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="saveClick()" class="btn btn-success" data-dismiss="modal">Register</button>
+      </div>
+    </div>
+  </div>
 </div>

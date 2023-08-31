@@ -9,11 +9,15 @@ import { RegisterService } from '../register.service';
 })
 export class RegisterComponent {
  registers:Register[]=[];
+newRegister:Register= new Register();
+
+
  constructor(private RegisterService:RegisterService){
  }
 
-ngOnInit(){
-  this.getAll();
+onSubmit(){
+  this.RegisterService.SaveRegister(this.newRegister);
+    console.log('Registration data:', this.RegisterService.getAll());
 }
 
  getAll(){
@@ -27,4 +31,16 @@ ngOnInit(){
     }
   )
  }
+ saveClick(){
+  //alert(this.newEmployee.name)
+  this.RegisterService.SaveRegister(this.newRegister).subscribe(
+    (Response)=>{
+      //alert('data saved')
+      this.getAll();
+    },
+    (error)=>{
+      console.log(error);
+    }
+  );
+}
 }
